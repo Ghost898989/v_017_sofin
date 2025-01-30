@@ -35,6 +35,8 @@ class Database(context: Context, databaseName: String) : SQLiteOpenHelper(contex
 
 
 
+
+
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE")
         onCreate(db)
